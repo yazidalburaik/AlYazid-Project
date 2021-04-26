@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SQL">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/firstName_Sql"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sqlite" />
+
+    <EditText
+        android:id="@+id/firstName_Sql"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/lastName_Sql"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/lastName_Sql"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/Phone_Sql"
+        app:layout_constraintStart_toStartOf="@+id/firstName_Sql"
+        app:layout_constraintTop_toBottomOf="@+id/firstName_Sql" />
+
+    <EditText
+        android:id="@+id/Phone_Sql"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/Email_Sql"
+        app:layout_constraintStart_toStartOf="@+id/lastName_Sql"
+        app:layout_constraintTop_toBottomOf="@+id/lastName_Sql" />
+
+    <EditText
+        android:id="@+id/Email_Sql"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/ID_Sql"
+        app:layout_constraintStart_toStartOf="@+id/Phone_Sql"
+        app:layout_constraintTop_toBottomOf="@+id/Phone_Sql" />
+
+    <EditText
+        android:id="@+id/ID_Sql"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_insertSQL"
+        app:layout_constraintStart_toStartOf="@+id/Email_Sql"
+        app:layout_constraintTop_toBottomOf="@+id/Email_Sql" />
+
+    <Button
+        android:id="@+id/bttn_insertSQL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/black"
+        android:text="Insert"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_deleteSQL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ID_Sql" />
+
+    <Button
+        android:id="@+id/bttn_updateSQL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="13dp"
+        android:backgroundTint="@color/black"
+        android:text="Update"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_insertFBSQL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttn_deleteSQL" />
+
+    <Button
+        android:id="@+id/bttn_deleteSQL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/black"
+        android:text="Delete"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_updateSQL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttn_insertSQL" />
+
+    <Button
+        android:id="@+id/bttn_SelectSQL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/black"
+        android:text="Select Options"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttn_insertFBSQL" />
+
+    <Button
+        android:id="@+id/bttn_insertFBSQL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/black"
+        android:text="Insert Info From Firebase"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_SelectSQL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttn_updateSQL" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".FirebaseMain">
+
+
+    <ImageView
+        android:id="@+id/img_fb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/firebase"
+        app:layout_constraintBottom_toTopOf="@+id/edit_fname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bttn_insert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="25dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+        android:text="Insert"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_select"
+        app:layout_constraintEnd_toStartOf="@+id/bttn_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email" />
+
+    <Button
+        android:id="@+id/bttn_delete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+        android:text="Delete"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bttn_insert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bttn_insert" />
+
+    <Button
+        android:id="@+id/bttn_update"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="14dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+        android:text="Update"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bttn_select"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bttn_select" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textColorHint="#B5A9A9"
+        app:layout_constraintBottom_toTopOf="@+id/bttn_insert"
+        app:layout_constraintStart_toStartOf="@+id/edit_Phone"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Phone" />
+
+    <Button
+        android:id="@+id/bttn_select"
+        android:layout_width="187dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="35dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/black"
+        android:text="Select"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bttn_update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttn_insert" />
+
+    <EditText
+        android:id="@+id/edit_fname"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#B5A9A9"
+        app:layout_constraintBottom_toTopOf="@+id/edit_lname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_fb" />
+
+    <EditText
+        android:id="@+id/edit_Phone"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:textColor="#000000"
+        android:textColorHint="#B5A9A9"
+        app:layout_constraintBottom_toTopOf="@+id/edit_email"
+        app:layout_constraintStart_toStartOf="@+id/edit_Uid"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Uid" />
+
+    <EditText
+        android:id="@+id/edit_Uid"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#B5A9A9"
+        app:layout_constraintBottom_toTopOf="@+id/edit_Phone"
+        app:layout_constraintStart_toStartOf="@+id/edit_lname"
+        app:layout_constraintTop_toBottomOf="@+id/edit_lname" />
+
+    <EditText
+        android:id="@+id/edit_lname"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#B5A9A9"
+        app:layout_constraintBottom_toTopOf="@+id/edit_Uid"
+        app:layout_constraintStart_toStartOf="@+id/edit_fname"
+        app:layout_constraintTop_toBottomOf="@+id/edit_fname" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
